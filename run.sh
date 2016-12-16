@@ -64,7 +64,12 @@ if [ -n "${INIT_BACKUP}" ]; then
     /backup.sh
 fi
 
-echo "${CRON_TIME} /backup.sh >> /mongo_backup.log 2>&1" > /crontab.conf
-crontab  /crontab.conf
-echo "=> Running cron job"
-exec cron -f
+if [ -z "$1" ]; then
+    echo "${CRON_TIME} /backup.sh >> /mongo_backup.log 2>&1" > /crontab.conf
+    crontab  /crontab.conf
+    echo "=> Running cron job"
+    exec cron -f
+else
+    exec /$1.sh
+fi
+
