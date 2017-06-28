@@ -1,6 +1,6 @@
 # mongodb-backup
 
-[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
+[![Backup](https://hub.docker.com/r/alangoxip/mongodb-backup/)](https://hub.docker.com/r/alangoxip/mongodb-backup/)
 
 This image runs mongodump to backup data using cronjob to folder `/backup`
 
