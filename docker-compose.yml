@@ -1,0 +1,24 @@
+mongodb:
+  image: 'mongo:latest'
+  command:
+      - --storageEngine=wiredTiger
+      - --auth
+      - --wiredTigerCacheSizeGB=15
+  environment:
+      - MONGODB_HOST=127.0.0.1
+      - MONGODB_PORT=27017
+      - MONGODB_USER=myuser
+      - MONGODB_PASS=mypass
+  ports:
+    - "27017:27017"
+    - "28017:28017"
+mongodbbackup:
+  image: 'alangoxip/mongodb-backup:latest'
+  links:
+    - mongodb
+  environment:
+    - CRON_TIME=20 3 * * * #Change to your favorate cron job schedule (HKT now)
+    - MAX_BACKUPS=10
+    - INIT_BACKUP=yes
+  volumes:
+    - /host/backup:/backup #Change to the host folder where you want to store the backups
