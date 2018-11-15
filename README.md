@@ -2,7 +2,7 @@
 
 [![Backup](https://hub.docker.com/r/alangoxip/mongodb-backup/)](https://hub.docker.com/r/alangoxip/mongodb-backup/)
 
-This image runs mongodump to backup data using cronjob to folder `/backup`
+This image runs mongodump to backup data using cronjob to folder `/backup` , This back update to mongodb 4 already. 
 
 ## Usage:
 
