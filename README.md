@@ -1,6 +1,9 @@
 # mongodb-backup
 
-[![Backup](https://hub.docker.com/r/alangoxip/mongodb-backup/)](https://hub.docker.com/r/alangoxip/mongodb-backup/)
+https://hub.docker.com/r/alangoxip/mongodb-backup/
+
+[`4.0.0`, `latest` (Dockerfile*)](https://github.com/extralam/mongodb-backup/blob/master/Dockerfile)
+[`3.0.0`, `old` (*3.x/Dockerfile*)](https://github.com/extralam/mongodb-backup/blob/master/3.x/Dockerfile)
 
 This image runs mongodump to backup data using cronjob to folder `/backup` , This back update to mongodb >=4 already. 
 
